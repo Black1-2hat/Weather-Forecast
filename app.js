@@ -46,6 +46,21 @@ weatherApp.controller('forecastController', ['$scope', '$http', '$routeParams', 
 }]); 
 
 weatherApp.service('cityService', function() {
-    this.city = 'London';
+    this.city = 'London, UK';
+});
+
+
+weatherApp.directive('weatherReport', function() {
+   return {
+       restrict: 'E',
+       templateUrl : 'directives/weatherReport.html',
+       replace: true,
+       scope: {
+           weatherDay: '=',
+           convertToStandard: '&',
+           convertToDate: '&',
+           dateFormat: '@'
+       }
+   } 
 });
 

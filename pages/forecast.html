@@ -5,28 +5,21 @@
 
 <hr/>
 Days <br> 
-    <a href="#/forecast/2" ng-class="{ 'bg-primary' : days === '2' }">2</a> &nbsp;&#449; 
-    <a href="#/forecast/3" ng-class="{ 'bg-primary' : days === '3' }">3</a> &nbsp;&#449; 
-    <a href="#/forecast/4" ng-class="{ 'bg-primary' : days === '4' }">4</a> &nbsp;&#449; 
-    <a href="#/forecast/5" ng-class="{ 'bg-primary' : days === '5' }">5</a> &nbsp;&#449; 
-    <a href="#/forecast/6" ng-class="{ 'bg-primary' : days === '6' }">6</a> &nbsp;&#449;  
-    <a href="#/forecast/7" ng-class="{ 'bg-primary' : days === '7' }">7</a>
+    <a href="#/forecast/2" ng-class="{ 'bg-primary' : days === '2' }">( 2 )</a> &nbsp;&#449;&nbsp; 
+    <a href="#/forecast/3" ng-class="{ 'bg-primary' : days === '3' }">( 3 )</a> &nbsp;&#449;&nbsp; 
+    <a href="#/forecast/4" ng-class="{ 'bg-primary' : days === '4' }">( 4 )</a> &nbsp;&#449;&nbsp; 
+    <a href="#/forecast/5" ng-class="{ 'bg-primary' : days === '5' }">( 5 )</a> &nbsp;&#449;&nbsp;  
+    <a href="#/forecast/6" ng-class="{ 'bg-primary' : days === '6' }">( 6 )</a> &nbsp;&#449;&nbsp;   
+    <a href="#/forecast/7" ng-class="{ 'bg-primary' : days === '7' }">( 7 )</a>
     </div>
 </div>
 <div class="container text-center center-block">
 <div class="card-deck col-md-12">
 <div ng-repeat="w in weatherResult.list | limitTo: days">
-    <div class="col-md-4">
-        <div class="card" style=" width: 18.5rem;color:black;">
-            <h4 class="card-header">{{ convertToDate(w.dt) | date }}</h4>
-            <div class="card-block">
-               <div class="card-title">
-                Daytime temperature {{ convertToCelcius(w.temp.day) }}&#8451;
-                </div>
-            </div>
+        <div class="col-md-4">
+            <weather-report weather-day='w' convert-to-standard="convertToCelcius(daytimeTemp)" convert-to-date="convertToDate(dt)" date-format="MMM, d, y"></weather-report>
+            <br/>
         </div>
-        <br>
-    </div>
     </div>
 </div>
 </div>
