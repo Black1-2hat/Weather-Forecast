@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en-US" ng-app="weatherApp">
+    <head>
+        <title>Weather Forecast</title>
+        <meta http-equiv="X-UA-Compatible" content="IE-Edge">
+        <meta charset="utf-8">
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+        
+        <!--Loading AngularJS Script-->
+         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+        <script src="https://code.angularjs.org/1.6.1/angular-route.min.js"></script>
+        <script src="app.js"></script>
+  
+        
+        <style>
+            html,body,input,select,textarea {
+                font-size: 1.05em !important;
+            }
+            body, .jumbotron {
+                background: #1A2980; /* fallback for old browsers */
+                background: -webkit-linear-gradient(to left, #1A2980 , #26D0CE); /* Chrome 10-25, Safari 5.1-6 */
+                background: linear-gradient(to left, #1A2980 , #26D0CE); 
+                color: white;
+            }
+            a {
+                color:white;
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
+            <div class="container">
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand" href="#/">Weather Forecast</a>
+
+                <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                    <ul class="navbar-nav mr-auto">
+                    </ul>
+                    <a href="#/"><button class="btn btn-primary my-2 my-sm-0 mr-auto">Search City &raquo;</button></a>
+              </div>
+            </div>
+        </nav>
+        <div ng-view>  
+        </div>
+    </body>
+</html>
