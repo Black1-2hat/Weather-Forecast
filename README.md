@@ -1,8 +1,10 @@
 # Weather Forecast
 - A weather forecast web app built completely using AngularJS 1.6
 
-### Details
-- Project uses Bootstrap v4.0 (alpha) and AngularJS 1.6.2
+### Project Details
+- Bootstrap v4.0 (alpha) 
+- AngularJS 1.6.2
+- OpenWeatherMap API 
 
 ### How to use this Project
 - Download / Clone this project to your machine
